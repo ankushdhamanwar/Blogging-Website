@@ -16,7 +16,7 @@ def register():
         user = User.query.filter_by(email = email).first()
         if user:
             print("already exists")
-            return redirect(url_for('auth.signup'))
+            return redirect(url_for('auth.register'))
         else:
             user = user_datastore.create_user(email = email, password=password, name=name, roles=['author'])
             db.session.commit()
