@@ -12,7 +12,7 @@ class User(db.Model, UserMixin):
     name = db.Column(db.String(100, collation='NOCASE'), nullable=False, server_default='')
 
     roles = db.relationship('Role', secondary='user_roles', backref = db.backref('users', lazy='dynamic'))
-    posts = db.relationship('Post',backref='user',lazy=True)
+    posts = db.relationship('Post',backref='author',lazy=True)
     active = db.Column(db.Boolean(), nullable=False, server_default='0')
 
     # Define the Role data-model

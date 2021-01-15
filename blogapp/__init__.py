@@ -23,4 +23,8 @@ def create_app():
 
     from .main.routes import main
     app.register_blueprint(main)
+
+    from .blog.routes import blog
+    app.register_blueprint(blog)
+
     return app
