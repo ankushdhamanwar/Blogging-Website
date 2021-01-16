@@ -8,6 +8,12 @@ Admin credentials
 email = admin@example.com  
 password = admin  
 
+Requirements  
+-python3  
+-pip  
+-virtualenv  
+-git  
+
 
 To run the webapp  
 -clone the repository  
